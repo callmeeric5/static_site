@@ -6,10 +6,10 @@ import sys
 
 def main():
     basepath = sys.argv if sys.argv else "/"
-    if os.path.exists("public"):
-        shutil.rmtree("public")
-    os.mkdir("public")
-    _copy_dir_file("static", "public")
+    if os.path.exists("docs"):
+        shutil.rmtree("docs")
+    os.mkdir("docs")
+    _copy_dir_file("static", "docs")
     generate_pages_recursive("content", "template.html", "docs", basepath)
 
 
